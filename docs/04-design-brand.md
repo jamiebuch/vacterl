@@ -10,6 +10,7 @@ Use the hi-res JPG as reference only. Request vector (SVG/AI/EPS) from designer 
 
 ## Palette (sampled from logo — confirm hex with designer)
 
+Raw umbrella panel colours:
 * Yellow panel ~ `#FFE600`
 * Red-orange ~ `#FF2E1F`
 * Green ~ `#00E838`
@@ -19,7 +20,19 @@ Use the hi-res JPG as reference only. Request vector (SVG/AI/EPS) from designer 
 * Cyan ~ `#00E5FF`
 * Body grey ~ `#4A4A4A` on white
 
-Accessibility: rainbow panels are decorative. Body text must meet WCAG 2.2 AA (4.5:1). Grey `#4A4A4A` on white passes; coloured panels do not — never put body copy on them. Use white cards + one accent per section.
+### Modernised v2 web design tokens (warm, accessible, healthcare-trust)
+
+To prevent the 7 rainbow panels from looking dated or failing WCAG contrast on light backgrounds, v2 uses a warm, reassuring surface palette (`#FCFBF9` warm alabaster, `#F4F1EA` softoat, `#EEF3FF` soft sky) paired with deep slate-navy (`#162032`) for primary typography and paired **border + accessible badge** tokens for each V-A-C-T-E-R-L panel:
+
+* **V (Vertebral)**: Accent `#E5A000` · Soft surface `#FFF8DB` · Text `#6E4B00`
+* **A (Anal)**: Accent `#E03131` · Soft surface `#FFF0F0` · Text `#8A1C1C`
+* **C (Cardiac)**: Accent `#0CA678` · Soft surface `#E6FCF5` · Text `#085E44`
+* **T (Tracheo-)**: Accent `#3B5BDB` · Soft surface `#EDF2FF` · Text `#1E3A8A`
+* **E (Oesophageal)**: Accent `#7950F2` · Soft surface `#F3F0FF` · Text `#442399`
+* **R (Renal / Radius)**: Accent `#F76707` · Soft surface `#FFF4E6` · Text `#8C3800`
+* **L (Limb)**: Accent `#0C8599` · Soft surface `#E3FAFC` · Text `#074F5B`
+
+Accessibility: raw rainbow panels are decorative only. Body and badge text must meet WCAG 2.2 AA (≥4.5:1). Never put body copy on raw neon panels; use white/warm-ivory cards with top/left accent bars and accessible dark-tinted badge text.
 
 ## Typography & tone
 

@@ -3,71 +3,162 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VACTERL Association Support Group — Home (Concept B: Get-Together)</title>
-<meta name="description" content="Draft concept B. Event-led homepage centred on the annual Get-Together and community photos.">
+<title>VACTERL Association Support Group — Home (Concept B v2: Get-Together & Stories)</title>
+<meta name="description" content="Modernised Concept B (v2). Event-led homepage centred on the annual Get-Together, Then & Now stories, and community films.">
 <style>
-:root{--ink:#222;--muted:#555;--line:#e3e3e8;--blue:#1f49e0}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);line-height:1.6}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-.topbar{background:#111;color:#fff;font-size:.88rem}.topbar .wrap{padding:8px 20px;display:flex;gap:14px;flex-wrap:wrap}
-header{border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;gap:14px;padding:10px 0}
-.nav img{height:48px}.nav nav{margin-left:auto;display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:800}
-.btn.dark{background:#111;color:#fff}.btn.blue{background:var(--blue);color:#fff}.btn.ghost{border:2px solid #111;color:#111}
-.hero{background:#f4f6ff;border-bottom:1px solid var(--line)}.hero .wrap{padding:34px 20px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
-@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}}
-h1{font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.05;margin:.4em 0}
-.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin:18px 0}
-@media(max-width:800px){.gallery{grid-template-columns:1fr 1fr}}
-.gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
-.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:20px 0}
-@media(max-width:800px){.strip{grid-template-columns:1fr}}
-.box{border:1px solid var(--line);border-radius:12px;padding:16px}
-section{padding:22px 0}.film{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:800px){.film{grid-template-columns:1fr}}
-.film .ph{background:#0f0f12;color:#fff;border-radius:12px;padding:40px 20px;text-align:center}
-footer{background:#111;color:#ddd;margin-top:10px}footer a{color:#fff}footer .wrap{padding:24px 20px}
-.small{color:var(--muted);font-size:.9rem}
+:root {
+  --ink: #141c2b;
+  --muted: #4b5563;
+  --bg: #fcfbf9;
+  --surface: #ffffff;
+  --line: #e2e8f0;
+  --blue: #1f49e0;
+  --focus: #0b5fff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+}
+a:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.topbar { background: #0f172a; color: #f8fafc; font-size: 0.88rem; }
+.topbar .wrap { padding: 9px 24px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+header { border-bottom: 1px solid var(--line); background: #fff; position: sticky; top: 0; z-index: 20; }
+.nav { display: flex; align-items: center; gap: 16px; padding: 12px 0; flex-wrap: wrap; }
+.nav img { height: 50px; border-radius: 8px; }
+.nav nav { margin-left: auto; display: flex; gap: 16px; flex-wrap: wrap; font-weight: 600; }
+.nav nav a { text-decoration: none; color: var(--ink); }
+.btn { display: inline-flex; align-items: center; padding: 12px 22px; border-radius: 999px; text-decoration: none; font-weight: 700; min-height: 46px; }
+.btn.dark { background: #0f172a; color: #fff; }
+.btn.blue { background: var(--blue); color: #fff; }
+.btn.ghost { border: 2px solid #0f172a; color: #0f172a; }
+.hero { background: linear-gradient(180deg, #eef3ff 0%, #fcfbf9 100%); border-bottom: 1px solid var(--line); }
+.hero .wrap { padding: 42px 24px; display: grid; grid-template-columns: 1fr 1.05fr; gap: 32px; align-items: center; }
+@media (max-width: 900px) { .hero .wrap { grid-template-columns: 1fr; } }
+h1 { font-size: clamp(2.1rem, 4.4vw, 3.2rem); line-height: 1.08; margin: 0.35em 0; letter-spacing: -0.02em; }
+.gallery { display: grid; grid-template-columns: 1.3fr 1fr; gap: 12px; }
+.gallery img { width: 100%; height: 210px; object-fit: cover; border-radius: 14px; border: 1px solid var(--line); background: #fff; }
+.gallery img.span-col { grid-column: span 2; height: 230px; }
+.unmirror { transform: scaleX(-1); }
+.strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding: 28px 0; }
+@media (max-width: 800px) { .strip { grid-template-columns: 1fr; } }
+.box { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+.box h3 { margin-top: 0; }
+section { padding: 28px 0; border-top: 1px solid var(--line); }
+.then-now { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 16px; }
+@media (max-width: 720px) { .then-now { grid-template-columns: 1fr; } }
+.then-now figure { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.then-now img { width: 100%; height: 220px; object-fit: cover; object-position: top; display: block; }
+.then-now figcaption { padding: 10px 14px; font-size: 0.86rem; color: var(--muted); }
+.film { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 800px) { .film { grid-template-columns: 1fr; } }
+.film .ph { background: #0f172a; color: #fff; border-radius: 16px; padding: 32px 24px; border: 1px solid #334155; }
+.film .ph h3 { margin-top: 0; }
+footer { background: #0f172a; color: #cbd5e1; margin-top: 20px; }
+footer a { color: #fff; }
+footer .wrap { padding: 28px 24px; font-size: 0.92rem; }
+.small { color: var(--muted); font-size: 0.88rem; }
 </style>
 </head>
 <body>
-<div class="topbar"><div class="wrap"><span>Next Get-Together date TBC — join the mailing list</span><span style="margin-left:auto">Charity number TBC</span></div></div>
-<header><div class="wrap nav">
-<img src="../assets/source-material/logo-umbrella.jpg" alt="VACTERL Association logo">
-<nav aria-label="Primary"><a href="#">Get-Together</a><a href="#">Photos</a><a href="#">Films</a><a href="#">Partners</a><a href="#">Join</a></nav>
-<a class="btn blue" href="#">Donate</a>
-</div></header>
-<main>
-<div class="hero"><div class="wrap">
-<div>
-<p><strong>Concept B — Get-Together led • draft</strong></p>
-<h1>Each year we hold the VACTERL Get-Together.</h1>
-<p>We’ve grown together over the years and made amazing connections. New families welcome — come and meet us at the pop-up and information station.</p>
-<p><a class="btn dark" href="#">What to expect</a> <a class="btn ghost" href="#">See photos</a></p>
-<p class="small">Photos show real volunteers/events. Publish only with written consent. No surnames for children.</p>
-</div>
-<div class="gallery" aria-label="Event photos">
-<img src="../assets/source-material/bristol-popup-banner.jpg" alt="Bristol pop-up banner explaining VACTERL letters and aims beside an information table">
-<img src="../assets/source-material/information-station.jpg" alt="Information station table with Family Fund, TOFS and charity displays" loading="lazy">
-<img src="../assets/source-material/volunteers-2025-03-01.jpg" alt="Volunteers in VACTERL polo shirts" loading="lazy">
-</div>
+<div class="topbar"><div class="wrap">
+  <span><strong>Annual VACTERL Get-Together:</strong> Featuring clinical Q&amp;A (Slido), Changing Places info &amp; family networking</span>
+  <span style="margin-left:auto">Charity number TBC</span>
 </div></div>
-<div class="wrap">
-<section class="strip">
-<div class="box"><h3>Meet others</h3><p>Friendships for VACTERL children, support for parents and carers.</p></div>
-<div class="box"><h3>Learn</h3><p>Talks on bowel care, stoma care, continence and medical trauma — with clinicians.</p></div>
-<div class="box"><h3>Belong</h3><p>Together we support, educate and empower. Global connections.</p></div>
-</section>
-<section><h2>Films</h2>
-<div class="film">
-<div class="ph">Who we are — film embed (transcript below)<br><span class="small">Original 513 MB — do not self-host. Use YouTube/PeerTube embed.</span></div>
-<div class="ph">Get Together 2025 — film embed (transcript below)<br><span class="small">Original 570 MB — compressed 720p + captions required.</span></div>
-</div>
-<p class="small">Each film needs captions (.vtt), poster image and full transcript on the Stories page.</p>
-</section>
-<section><h2>With thanks</h2><p>TOFS · Family Fund · IPSEA · Birmingham Children’s Hospital and others (verify list). We collaborate to raise awareness and contribute to research.</p></section>
-</div>
+<header><div class="wrap nav">
+  <img src="../assets/source-material/logo-umbrella.jpg" alt="VACTERL Association logo">
+  <strong>VACTERL Association</strong>
+  <nav aria-label="Primary">
+    <a href="#events">Get-Together</a>
+    <a href="#then-now">Then &amp; Now</a>
+    <a href="#films">Films</a>
+    <a href="#partners">Partners</a>
+    <a href="home-v4-modern-flagship.html">v2 Flagship</a>
+  </nav>
+  <a class="btn blue" href="#donate">Donate</a>
+</div></header>
+
+<main>
+  <div class="hero" id="events"><div class="wrap">
+    <div>
+      <p><strong>Concept B (v2 Modernised) — Get-Together &amp; Community Led</strong></p>
+      <h1>Each year we hold the VACTERL Get-Together.</h1>
+      <p>We’ve grown together over the years and made amazing connections. Whether you are a newly diagnosed family or an adult living with VACTERL, come and meet us.</p>
+      <p style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn dark" href="#then-now">See Then &amp; Now Stories</a>
+        <a class="btn ghost" href="#films">Watch Community Films</a>
+      </p>
+      <p class="small">Photos show real volunteers and events. Publish only with written consent in the offline register. No surnames for children.</p>
+    </div>
+    <div class="gallery" aria-label="Event photos">
+      <img class="span-col" src="../assets/source-material/information-station.jpg" alt="2025 Get-Together information station with Family Fund, TOFS, ERN eUROGEN and IPSEA displays">
+      <img src="../assets/source-material/bristol-popup-banner.jpg" alt="Bristol pop-up banner and table with VACTERL and Max's Trust leaflets" loading="lazy">
+      <img class="unmirror" src="../assets/source-material/volunteers-2025-03-01.jpg" alt="Volunteers in VACTERL polo shirts (unmirrored)" loading="lazy">
+    </div>
+  </div></div>
+
+  <div class="wrap">
+    <div class="strip">
+      <div class="box">
+        <h3>Meet Others</h3>
+        <p>Lifelong friendships for VACTERL children and teenagers, plus a welcoming peer network for parents and carers.</p>
+      </div>
+      <div class="box">
+        <h3>Learn from Experts</h3>
+        <p>Talks on ARM, bowel &amp; stoma care (Gail Fitzpatrick, Birmingham Children's Hospital), continence, and our <strong>medical trauma appointment card</strong>.</p>
+      </div>
+      <div class="box">
+        <h3>From Isolation to Advocacy</h3>
+        <p>Co-producing patient empowerment guidance with TOFS, Max's Trust, and ERN eUROGEN across Europe and the globe.</p>
+      </div>
+    </div>
+
+    <section id="then-now">
+      <h2>Growing Up Together: Banner "Then &amp; Now"</h2>
+      <p>Young adults in our community pointing back at their childhood photographs on the VACTERL Association pop-up banner:</p>
+      <div class="then-now">
+        <figure>
+          <img src="../assets/pptx-extracted/image11.JPG" alt="Young adult pointing to his childhood photo on the banner" loading="lazy">
+          <figcaption>Sharing adult perspectives on continence and medical trauma.</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/pptx-extracted/image10.JPG" alt="Young woman pointing to her childhood photo on the banner" loading="lazy">
+          <figcaption>Growing up through annual VACTERL Get-Togethers.</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/pptx-extracted/image12.JPG" alt="Young woman pointing to her childhood photo at the foot of the banner" loading="lazy">
+          <figcaption>Visible reassurance for parents of newly diagnosed babies.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="films">
+      <h2>Community Films</h2>
+      <div class="film">
+        <div class="ph">
+          <h3>Who We Are — Short Film</h3>
+          <p>Original 513 MB MP4 — do not self-host in git. Transcode to 720p/1080p with WebVTT captions and embed via <code>lite-youtube-embed</code>.</p>
+        </div>
+        <div class="ph">
+          <h3>VACTERL Get-Together 2025</h3>
+          <p>Original 570 MB MP4 — highlights from the 2025 annual event. Requires consent check, poster image, and full on-page transcript.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="partners">
+      <h2>Collaborations &amp; Signposting</h2>
+      <p>TOFS &amp; Adult TOF Working Group · Max's Trust (ARM Community) · ERN eUROGEN · Family Fund · IPSEA · PINNT · Over The Wall Camp · SOMA · EAT · ORCHID · Birmingham Children’s Hospital.</p>
+    </section>
+  </div>
 </main>
-<footer><div class="wrap">VACTERL Association Support Group — draft. <a href="https://www.facebook.com/groups/161861912196/">Facebook</a> · <a href="https://www.instagram.com/vacterlassociation/tagged/">Instagram</a> · info address TBC. Not medical advice.</div></footer>
+
+<footer id="donate"><div class="wrap">
+  VACTERL Association Support Group — Modernised Concept B (v2). <a href="https://www.facebook.com/groups/161861912196/">Facebook</a> · <a href="https://www.instagram.com/vacterlassociation/tagged/">Instagram</a> · JustGiving QR in Slide 14. Not medical advice.
+</div></footer>
 </body>
 </html>

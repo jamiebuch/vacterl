@@ -29,7 +29,8 @@ podman run --rm -v "$PWD:/app:z" -w /app node:22-alpine npx astro build
 
 ## Donations
 
-* Use provider supporting Gift Aid + charity rates: `Stripe Payment Links`, `PayPal Giving Fund`, or `Open Collective` (open-source platform). Do not build custom card handling. Confirm charity number first (applied Oct 2023 per TOFS article — verify).
+* Slide 14 (`image27.png`) shows the association already uses **JustGiving** (with a QR code + JustGiving wordmark under the umbrella logo). Confirm the live JustGiving page URL and Gift Aid setup first.
+* Alternatives if migrating or adding direct links: `Stripe Payment Links`, `PayPal Giving Fund`, or `Open Collective` (open-source platform). Do not build custom card handling. Confirm charity number first (applied Oct 2023 per TOFS article — verify).
 
 ## Video (500+ MB MP4s cannot ship in git/site)
 

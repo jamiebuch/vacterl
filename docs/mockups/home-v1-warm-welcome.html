@@ -3,92 +3,268 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VACTERL Association Support Group — Home (Concept A: Warm Welcome)</title>
-<meta name="description" content="Draft concept A. Parent-led support network for children and families living with VACTERL association.">
+<title>VACTERL Association Support Group — Home (Concept A v2: Warm Welcome)</title>
+<meta name="description" content="Modernised Concept A (v2). Parent-led support network for children, young adults and families living with VACTERL association.">
 <style>
-:root{--ink:#2b2b2b;--muted:#4a4a4a;--bg:#fff;--soft:#f6f6f8;--line:#e5e5ea;--blue:#2f5bff;--focus:#0b5fff}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);line-height:1.6;background:var(--bg)}
-a{color:var(--blue)}a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-header{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:10}
-.nav{display:flex;align-items:center;gap:16px;padding:12px 0}
-.nav img{height:52px;width:auto}
-.nav nav{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap;font-size:.95rem}
-.btn{display:inline-block;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:700;border:2px solid var(--blue)}
-.btn.primary{background:var(--blue);color:#fff}
-.btn.secondary{background:#fff;color:var(--blue)}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;padding:36px 0;align-items:center}
-@media(max-width:860px){.hero{grid-template-columns:1fr}}
-.hero img{width:100%;height:auto;border-radius:16px;border:1px solid var(--line)}
-.kicker{display:inline-block;background:#eef3ff;border:1px solid #cdd9ff;border-radius:999px;padding:4px 12px;font-size:.85rem;font-weight:700}
-h1{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:.5em 0}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
-.letters{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin:22px 0}
-@media(max-width:640px){.letters{grid-template-columns:repeat(4,1fr)}}
-.letter{background:#fff;border:1px solid var(--line);border-top:8px solid #999;border-radius:12px;padding:10px;text-align:center}
-.letter strong{display:block;font-size:1.4rem}
-.letter span{font-size:.8rem;color:var(--muted)}
-section{padding:28px 0;border-top:1px solid var(--line)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-@media(max-width:860px){.cards{grid-template-columns:1fr}}
-.card{border:1px solid var(--line);border-radius:14px;padding:18px;background:#fff}
-.card h3{margin-top:0}
-footer{background:#111;color:#eee;margin-top:20px}
-footer a{color:#fff}footer .wrap{padding:26px 20px;font-size:.92rem}
-.small{font-size:.88rem;color:var(--muted)}
+:root {
+  --ink: #182232;
+  --muted: #4b5563;
+  --bg: #fdfcfa;
+  --surface: #ffffff;
+  --soft: #f5f3ee;
+  --line: #e5e7eb;
+  --blue: #254EDB;
+  --blue-dark: #1d3eb0;
+  --focus: #0b5fff;
+  --radius: 16px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--ink);
+  line-height: 1.65;
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--ink);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  z-index: 100;
+}
+.skip-link:focus { top: 12px; }
+.rainbow-top {
+  height: 5px;
+  background: linear-gradient(90deg, #FFE600, #FF2E1F, #00E838, #5B7CFF, #CFAFFF, #FF6A00, #00E5FF);
+}
+a { color: var(--blue); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+header {
+  border-bottom: 1px solid var(--line);
+  background: rgba(253, 252, 250, 0.92);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.nav { display: flex; align-items: center; gap: 16px; padding: 14px 0; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.brand img { height: 52px; width: auto; border-radius: 8px; }
+.brand strong { font-size: 1.1rem; display: block; line-height: 1.2; }
+.brand span { font-size: 0.8rem; color: var(--muted); }
+.nav nav { margin-left: auto; display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.95rem; font-weight: 600; }
+.nav nav a { text-decoration: none; color: var(--ink); }
+.nav nav a:hover { color: var(--blue); }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 2px solid var(--blue);
+  min-height: 46px;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn.primary { background: var(--blue); color: #fff; box-shadow: 0 4px 12px rgba(37, 78, 219, 0.22); }
+.btn.primary:hover { background: var(--blue-dark); }
+.btn.secondary { background: var(--surface); color: var(--blue); }
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 36px;
+  padding: 44px 0 36px;
+  align-items: center;
+}
+@media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
+.hero-photo {
+  background: var(--surface);
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(24, 34, 50, 0.07);
+}
+.hero-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+  transform: scaleX(-1); /* Unmirrors front-camera selfie so polo logos read left-to-right */
+}
+.kicker {
+  display: inline-block;
+  background: #edf2ff;
+  color: #1e3a8a;
+  border: 1px solid #c7d7fe;
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+h1 { font-size: clamp(2.1rem, 4vw, 3.1rem); line-height: 1.12; margin: 0.45em 0; letter-spacing: -0.02em; }
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 22px 0; }
+.letters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin: 24px 0;
+}
+.letter {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 6px solid var(--bar, #999);
+  border-radius: 14px;
+  padding: 16px 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.letter-badge {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.25rem;
+  background: var(--bg-pill);
+  color: var(--ink-pill);
+  margin-bottom: 8px;
+}
+.letter strong.title { display: block; font-size: 1rem; margin-bottom: 2px; }
+.letter span { font-size: 0.84rem; color: var(--muted); display: block; }
+section { padding: 36px 0; border-top: 1px solid var(--line); }
+section h2 { font-size: 1.65rem; margin-top: 0; letter-spacing: -0.015em; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+@media (max-width: 860px) { .cards { grid-template-columns: 1fr; } }
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  background: var(--surface);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.card h3 { margin-top: 0; font-size: 1.15rem; }
+.quote-banner {
+  background: var(--soft);
+  border-left: 5px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  margin-top: 20px;
+}
+.quote-banner blockquote { margin: 0 0 8px; font-style: italic; font-size: 1.05rem; }
+.quote-banner cite { font-size: 0.86rem; color: var(--muted); font-style: normal; font-weight: 600; }
+footer { background: #111827; color: #e5e7eb; margin-top: 28px; }
+footer a { color: #fff; }
+footer .wrap { padding: 32px 24px; font-size: 0.92rem; }
+.small { font-size: 0.88rem; color: var(--muted); }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="rainbow-top" aria-hidden="true"></div>
 <header><div class="wrap nav">
-<img src="../assets/source-material/logo-umbrella.jpg" alt="VACTERL Association Support Group logo: rainbow umbrella">
-<nav aria-label="Primary"><a href="#">What is VACTERL?</a><a href="#">Support</a><a href="#">Get-Together</a><a href="#">Stories</a><a href="#">Contact</a></nav>
-<a class="btn primary" href="#">Donate</a>
+  <a class="brand" href="#">
+    <img src="../assets/source-material/logo-umbrella.jpg" alt="VACTERL Association Support Group logo: rainbow umbrella">
+    <div><strong>VACTERL Association</strong><span>UK Support Group</span></div>
+  </a>
+  <nav aria-label="Primary">
+    <a href="#what-is-vacterl">What is VACTERL?</a>
+    <a href="#how-we-help">How We Help</a>
+    <a href="#get-together">Get-Together</a>
+    <a href="#collaborate">Partners</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="btn primary" href="#contact">Donate (JustGiving)</a>
 </div></header>
-<main class="wrap">
-<div class="hero">
-<div>
-<span class="kicker">Concept A — Warm Welcome • draft, needs review</span>
-<h1>Support, educate and empower.</h1>
-<p>A parent-led network for children and families living with VACTERL association. Each year we hold the VACTERL Get-Together — we’ve grown together and made amazing connections.</p>
-<div class="cta-row"><a class="btn primary" href="#">Get support</a><a class="btn secondary" href="#">Join us</a><a class="btn secondary" href="#">Donate</a></div>
-<p class="small">Information here is not medical advice. Always talk to your care team. Charity number TBC.</p>
-</div>
-<div><img src="../assets/source-material/volunteers-2025-03-01.jpg" alt="Three volunteers wearing VACTERL logo polo shirts at an information stand"></div>
-</div>
 
-<div class="letters" aria-label="What each letter means">
-<div class="letter" style="border-top-color:#FFE600"><strong>V</strong><span>Vertebral</span></div>
-<div class="letter" style="border-top-color:#FF2E1F"><strong>A</strong><span>Anal</span></div>
-<div class="letter" style="border-top-color:#00B83D"><strong>C</strong><span>Cardiac</span></div>
-<div class="letter" style="border-top-color:#5B7CFF"><strong>T</strong><span>Tracheo- oesophageal</span></div>
-<div class="letter" style="border-top-color:#9a7bff"><strong>E</strong><span>Oesophageal*</span></div>
-<div class="letter" style="border-top-color:#FF6A00"><strong>R</strong><span>Renal / Radius</span></div>
-<div class="letter" style="border-top-color:#00B8CC"><strong>L</strong><span>Limb</span></div>
-</div>
-<p class="small">* Banner wording: TE — Fistula ± oesophageal atresia. Three or more features in any combination may fit the association. VACTERL is not a single diagnosis with one cause. Prevalence ~1 in 10,000–40,000. Needs clinician sign-off.</p>
+<main id="main" class="wrap">
+  <div class="hero">
+    <div>
+      <span class="kicker">Concept A (v2 Modernised) — Warm Welcome</span>
+      <h1>Support, educate and empower.</h1>
+      <p>A parent- and peer-led network for children, young adults, and families living with VACTERL association. Each year we hold the VACTERL Get-Together — we’ve grown together over the years and made amazing connections.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#how-we-help">Get support</a>
+        <a class="btn secondary" href="#contact">Join as a member</a>
+        <a class="btn secondary" href="#contact">Donate</a>
+      </div>
+      <p class="small">Information here is for peer support and is not medical advice. Always talk to your clinical care team. Charity registration applied Oct 2023 (number TBC).</p>
+    </div>
+    <div class="hero-photo">
+      <img src="../assets/source-material/volunteers-2025-03-01.jpg" alt="Three volunteers wearing VACTERL logo polo shirts at an information stand" fetchpriority="high">
+    </div>
+  </div>
 
-<section><h2>How we help</h2>
-<div class="cards">
-<div class="card"><h3>Advice network</h3><p>Peer advice and support for children and parents / carers.</p></div>
-<div class="card"><h3>Friendships</h3><p>Chances for VACTERL children to meet and stay in touch.</p></div>
-<div class="card"><h3>Confidence</h3><p>Opportunities and self-esteem for the VACTERL child, plus awareness among professionals.</p></div>
-</div></section>
+  <section id="what-is-vacterl">
+    <h2>What each letter in VACTERL stands for</h2>
+    <p>VACTERL association is characterised by the sporadic, non-random association of specific birth differences. A person with <strong>three or more features</strong> in any combination may be recognised as fitting the association:</p>
+    <div class="letters" aria-label="What each letter means">
+      <div class="letter" style="--bar:#E5A000;--bg-pill:#FFF8DB;--ink-pill:#6E4B00"><span class="letter-badge">V</span><strong class="title">Vertebral</strong><span>Back bones / spine</span></div>
+      <div class="letter" style="--bar:#E03131;--bg-pill:#FFF0F0;--ink-pill:#8A1C1C"><span class="letter-badge">A</span><strong class="title">Anal</strong><span>Bottom opening (ARM)</span></div>
+      <div class="letter" style="--bar:#0CA678;--bg-pill:#E6FCF5;--ink-pill:#085E44"><span class="letter-badge">C</span><strong class="title">Cardiac</strong><span>Heart structure</span></div>
+      <div class="letter" style="--bar:#3B5BDB;--bg-pill:#EDF2FF;--ink-pill:#1E3A8A"><span class="letter-badge">T</span><strong class="title">Tracheo-</strong><span>Windpipe fistula (TOF)</span></div>
+      <div class="letter" style="--bar:#7950F2;--bg-pill:#F3F0FF;--ink-pill:#442399"><span class="letter-badge">E</span><strong class="title">Oesophageal*</strong><span>Food pipe atresia (OA)</span></div>
+      <div class="letter" style="--bar:#F76707;--bg-pill:#FFF4E6;--ink-pill:#8C3800"><span class="letter-badge">R</span><strong class="title">Renal / Radius</strong><span>Kidneys or forearm</span></div>
+      <div class="letter" style="--bar:#0C8599;--bg-pill:#E3FAFC;--ink-pill:#074F5B"><span class="letter-badge">L</span><strong class="title">Limb</strong><span>Arms, hands or legs</span></div>
+    </div>
+    <p class="small">* Banner wording: TE — Fistula ± oesophageal atresia. VACTERL is not a single diagnosis with one cause. Prevalence is ~1 in 10,000 to 1 in 40,000 live-born infants (Solomon, 2011). Needs clinician sign-off.</p>
+  </section>
 
-<section><h2>Get-Together</h2>
-<p>Annual meetup with families, clinicians and charities. See photos from the Bristol pop-up and information station.</p>
-<p><a href="#">What to expect at the Get-Together →</a></p></section>
+  <section id="how-we-help">
+    <h2>How we help children, adults &amp; families</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Advice &amp; Peer Network</h3>
+        <p>Practical peer advice and emotional support for children, young adults, and parents/carers from people with lived experience.</p>
+      </div>
+      <div class="card">
+        <h3>Lifelong Friendships</h3>
+        <p>Opportunities for VACTERL children and young adults to meet each other, build self-esteem, and see positive adult role models.</p>
+      </div>
+      <div class="card">
+        <h3>Clinical &amp; Trauma Awareness</h3>
+        <p>Specialist talks (bowel/stoma care, ARM, continence) and practical self-advocacy tools like our <strong>appointment trauma card</strong>.</p>
+      </div>
+    </div>
+    <div class="quote-banner">
+      <blockquote>“When our son was born, almost 20 years ago, I was told that his condition could be life-limiting. Having you and Alan join the group is sure testament that it is not.”</blockquote>
+      <cite>— Parent reflection from the 2024 Annual Meeting report (TOFS article by Kate Tyler)</cite>
+    </div>
+  </section>
 
-<section><h2>We collaborate</h2>
-<p>We collaborate with other agencies and charities to raise awareness and contribute to research — including TOFS, Family Fund and hospital teams.</p></section>
+  <section id="get-together">
+    <h2>Annual VACTERL Get-Together</h2>
+    <p>Each year we bring together families, young adults, clinical nurse specialists, and partner charities. See our 2025 information station, "Then &amp; Now" banner photos, and community films.</p>
+    <p><a href="home-v4-modern-flagship.html#get-together">Explore the full modernised v2 Flagship Concept →</a></p>
+  </section>
 
-<section><h2>Contact</h2>
-<p>Facebook group, Instagram, and email below. Replace with permanent address before launch (slides use <code>info@vacterlsupportgroup.onmicrosoft.com</code>).</p>
-<ul><li><a href="https://www.facebook.com/groups/161861912196/">Facebook group</a></li><li><a href="https://www.instagram.com/vacterlassociation/tagged/">Instagram</a></li></ul>
-</section>
+  <section id="collaborate">
+    <h2>We collaborate &amp; signpost</h2>
+    <p>We work alongside <strong>TOFS</strong> (and the Adult TOF Working Group), <strong>Max's Trust</strong> (UK ARM community), <strong>ERN eUROGEN</strong>, <strong>Family Fund</strong>, <strong>IPSEA</strong>, <strong>PINNT</strong>, <strong>Over The Wall Camp</strong>, <strong>SOMA</strong>, and hospital specialist teams such as Birmingham Children's Hospital.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact, Join &amp; Donate</h2>
+    <p>Connect with us via our Facebook support group, follow us on Instagram, or donate via JustGiving (see QR codes in the <a href="home-v4-modern-flagship.html#get-involved">v2 Flagship mockup</a>). Confirm permanent email before launch (slides use <code>info@vacterlsupportgroup.onmicrosoft.com</code>).</p>
+    <ul>
+      <li><a href="https://www.facebook.com/groups/161861912196/">Facebook Support Group</a></li>
+      <li><a href="https://www.instagram.com/vacterlassociation/tagged/">Instagram (@vacterlassociation)</a></li>
+    </ul>
+  </section>
 </main>
+
 <footer><div class="wrap">
-<strong>VACTERL Association Support Group</strong> — draft concept. Charity number TBC (applied Oct 2023 per 2024 article — verify).<br>
-<a href="#">Privacy</a> · <a href="#">Safeguarding</a> · <a href="#">Accessibility</a> · <span>Review date TBC</span>
+  <strong>VACTERL Association Support Group</strong> — Modernised Concept A (v2). Charity number TBC (applied Oct 2023 — verify).<br>
+  <a href="#">Privacy</a> · <a href="#">Safeguarding</a> · <a href="#">Accessibility</a> · <span>Not medical advice · Review date TBC</span>
 </div></footer>
 </body>
 </html>

@@ -17,6 +17,7 @@ Publishing rule: if consent is not `yes`, blur or omit. No surnames for children
 * `docs/assets/` currently holds reference copies for design, not final web assets.
 * Convert to WebP/AVIF, max width 1600px, ≤200 KB each. Strip EXIF GPS. Mandatory alt text.
 * Largest extracted files to triage first: `image3.jpg` (8.7 MB), `image17.jpeg` (6.2 MB), `image14.jpeg` (2.8 MB).
+* Note on `volunteers-2025-03-01.jpg`: this front-camera selfie is horizontally mirrored (the VACTERL umbrella logo on the polo shirts and the pop-up banner behind read backwards). Flip horizontally when exporting to WebP/AVIF for production, or apply `transform: scaleX(-1)` in prototypes.
 
 ## Video handling (both MP4s >500 MB — must not enter git)
 

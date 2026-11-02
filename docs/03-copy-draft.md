@@ -36,22 +36,31 @@ CTAs: Get support / Join us / Donate.
 * Develop a system of promoting self esteem for the VACTERL child
 * Advise the medical profession of the Association
 
-## Collaborations (from slides 8–9 + information station photo)
+## Collaborations & signposting (from slides 8–9, ERN eUROGEN flyer, and information station)
 
 > We collaborate with other agencies and charities, to raise awareness and contribute to research. And make connections across the globe!
 
-Named in materials: TOFS, Family Fund, IPSEA, SOMA / ARCH? (from display boards — verify), Birmingham Children's Hospital.
+Named across event materials and display boards (verify before listing):
+* **Core condition & advocacy partners**: TOFS (Tracheo-Oesophageal Fistula Support & Adult TOF Working Group), Max's Trust (supporting the UK Anorectal Malformation / ARM community), ERN eUROGEN (European Reference Network for Rare Uro-Recto-Genital Diseases — *"Patient Empowerment: A Journey From Isolation to Advocacy"*), SOMA, EAT, ORCHID.
+* **Practical, legal & camp support**: Family Fund (grants for families raising disabled or seriously ill children), IPSEA (Independent Provider of Special Education Advice — SEND legal advice), PINNT (support for people on home artificial nutrition), Over The Wall Camp (free residential camps for children and families), Buttony Bear (children with a stoma/button), Changing Places Toilets.
+* **Clinical & industry**: Birmingham Children's Hospital (ARM/stoma/bowel care specialist nursing), Coloplast (printed on banner foot).
+
+## Growing up with VACTERL ("Then & Now" + parent reflection)
+
+* Slideshow photos (`image9.JPG`–`image12.JPG`) show young adults (including Aled, Grace, and Rachel) pointing to their childhood photos on the original VACTERL Association pop-up banner — powerful visual proof that children born with VACTERL grow into thriving young adults and mentors.
+* Parent quote from the 2024 TOFS article Editor's note (confirm permission to quote):
+  > "Hi there, thank you so much. I just found it so insightful to see you and the work that you complete. When our son was born, almost 20 years ago, I was told that his condition could be life-limiting. Having you and Alan join the group is sure testament that it is not."
 
 ## Annual meeting summary (from TOFS article 2024 photo, by Kate Tyler)
 
 Paraphrased — retype fully with permission, do not OCR-publish scan:
 
-* 29 June annual event, new and old friends, plans heard.
-* Organisation recently applied to become a registered charity (Oct 2023 per article — confirm current number).
-* Patient advocacy role: helping rare-disease patients find voice, be heard, sense of community for multiple-anomaly challenges.
-* Speakers: Gail Fitzpatrick (Clinical Nurse Specialist in stoma and bowel care, Birmingham Children's Hospital) on ARM types and constipation management in young children; Aled Griffiths on bowel care/continence advice and living with the condition.
-* Aled's medical-trauma presentation with Alan: definitions of medical/emotional trauma, triggers (blood taken, physical exams without consent), trauma-card idea for appointments, music/distraction.
-* Note: adult TOF working group collaboration; VACTERL presentation to be on TOFS website.
+* 29 June annual event (attended by Kate Tyler and Alan French), meeting friends old and new and hearing the group's plans since October 2023.
+* Organisation recently applied to become a registered charity (confirm current charity number).
+* Patient advocacy role: helping rare-disease patients find their voice, express views and wishes, and navigate how multiple anomalies impact each other.
+* Speakers: Gail Fitzpatrick (Clinical Nurse Specialist in stoma and bowel care, Birmingham Children's Hospital) on ARM types in male and female infants and constipation management in young children; Aled Griffiths on practicalities of bowel care, complex continence challenges, and living with the condition.
+* Medical trauma & self-advocacy presentation (Aled, his partner Kodi, and Alan with the Adult TOF Working Group): definitions of medical/emotional trauma, triggers (having blood taken, physical exams without consent, feeling a loss of control), and practical tools prior to/during appointments — carrying a **trauma card** to hand to health professionals, taking an advocate, and using music or puzzles for distraction.
+* Note: shared challenges across rare conditions include accessing medical records, disability support, and appropriate medical devices/prosthetics.
 
 ## Contact block (from slide 10 — verify before publish)
 
@@ -63,8 +72,10 @@ Paraphrased — retype fully with permission, do not OCR-publish scan:
 
 > With your support, we can achieve so much more! If you'd like to become a member or join the committee, please ask the table staff or contact us!
 
-## Donate (from slide 14)
+(Note: `image26.png` contains the membership form QR code from slide 11.)
+
+## Donate (from slide 14 + `image27.png`)
 
 > VACTERL Association Support Group — DONATE HERE — Thankyou!
 
-Donate URL/QR target missing from text layer — recover from slide image or committee.
+`image27.png` confirms donations use **JustGiving** (QR code + JustGiving wordmark under the VACTERL umbrella). Confirm the exact JustGiving campaign/charity URL with the committee.

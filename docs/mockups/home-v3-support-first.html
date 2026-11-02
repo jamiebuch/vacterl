@@ -3,72 +3,161 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VACTERL Association Support Group — Home (Concept C: Support First)</title>
-<meta name="description" content="Draft concept C. Plain, high-legibility support-first homepage. Low bandwidth, large type.">
+<title>VACTERL Association Support Group — Home (Concept C v2: Support First & Easy Read)</title>
+<meta name="description" content="Modernised Concept C (v2). Plain-language, high-legibility support-first homepage for overwhelmed parents and low-bandwidth connections.">
 <style>
-:root{--ink:#111;--line:#222}
-*{box-sizing:border-box}body{margin:0;font-family:Verdana,Geneva,Tahoma,Arial,sans-serif;color:var(--ink);line-height:1.8;font-size:18px;background:#fff}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px}
-header{border-bottom:3px solid #111}.nav{display:flex;align-items:center;gap:12px;padding:12px 0;flex-wrap:wrap}
-.nav img{height:56px}nav ul{list-style:none;margin:0 0 0 auto;padding:0;display:flex;gap:12px;flex-wrap:wrap}
-nav a{color:#111;font-weight:bold}
-.notice{border:2px solid #111;border-radius:10px;padding:12px 16px;margin:18px 0;background:#fff8c2}
-h1{font-size:2.2rem;line-height:1.2}h2{margin-top:2em;border-top:3px solid #111;padding-top:.6em}
-.btn{display:block;text-align:center;padding:14px;border:3px solid #111;border-radius:10px;text-decoration:none;color:#111;font-weight:bold;margin:10px 0;background:#fff}
-.btn.primary{background:#111;color:#fff}
-ol.steps{padding-left:1.2em}ol.steps li{margin:.8em 0}
-.easy{background:#f2f2f2;border-radius:10px;padding:16px}
-footer{border-top:3px solid #111;margin-top:30px;font-size:1rem}footer .wrap{padding:20px}
-:focus-visible{outline:4px solid #005fcc;outline-offset:2px}
-img.demo{width:100%;height:auto;border:2px solid #111;border-radius:10px}
+:root {
+  --ink: #111827;
+  --muted: #374151;
+  --bg: #ffffff;
+  --warm-box: #fffbeb;
+  --soft-box: #f3f4f6;
+  --primary: #1d4ed8;
+  --focus: #005fcc;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Atkinson Hyperlegible", Verdana, Geneva, Tahoma, Arial, sans-serif;
+  color: var(--ink);
+  line-height: 1.8;
+  font-size: 19px;
+  background: var(--bg);
+}
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--ink);
+  color: #fff;
+  padding: 12px 18px;
+  font-weight: 700;
+}
+.skip-link:focus { top: 12px; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 0 22px; }
+header { border-bottom: 3px solid var(--ink); background: #fff; }
+.nav { display: flex; align-items: center; gap: 14px; padding: 14px 0; flex-wrap: wrap; }
+.nav img { height: 58px; }
+nav ul { list-style: none; margin: 0 0 0 auto; padding: 0; display: flex; gap: 16px; flex-wrap: wrap; }
+nav a { color: var(--ink); font-weight: 700; text-underline-offset: 4px; }
+.notice {
+  border: 3px solid var(--ink);
+  border-left-width: 10px;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin: 22px 0;
+  background: var(--warm-box);
+}
+h1 { font-size: 2.25rem; line-height: 1.2; margin: 0.5em 0 0.3em; }
+h2 { margin-top: 1.8em; border-top: 3px solid var(--ink); padding-top: 0.6em; font-size: 1.55rem; }
+.btn {
+  display: block;
+  text-align: center;
+  padding: 16px 20px;
+  border: 3px solid var(--ink);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 700;
+  margin: 12px 0;
+  background: #fff;
+}
+.btn.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+.btn:hover { filter: brightness(0.95); }
+.letter-list { list-style: none; padding: 0; margin: 16px 0; }
+.letter-list li {
+  border: 2px solid #d1d5db;
+  border-left: 8px solid var(--bar, var(--ink));
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  background: #fff;
+}
+ol.steps { padding-left: 1.3em; }
+ol.steps li { margin: 0.8em 0; }
+.easy {
+  background: var(--soft-box);
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 24px 0;
+}
+footer { border-top: 3px solid var(--ink); margin-top: 36px; font-size: 0.95rem; background: var(--soft-box); }
+footer .wrap { padding: 24px 22px; }
+:focus-visible { outline: 4px solid var(--focus); outline-offset: 3px; }
+img.demo { width: 100%; height: auto; border: 2px solid var(--ink); border-radius: 10px; }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header><div class="wrap nav">
-<img src="../assets/source-material/logo-umbrella.jpg" alt="VACTERL Association Support Group logo">
-<nav aria-label="Primary"><ul><li><a href="#">Support</a></li><li><a href="#">What is VACTERL?</a></li><li><a href="#">Contact</a></li></ul></nav>
+  <img src="../assets/source-material/logo-umbrella.jpg" alt="VACTERL Association Support Group logo">
+  <strong>VACTERL Support Group</strong>
+  <nav aria-label="Primary"><ul>
+    <li><a href="#letters">What is VACTERL?</a></li>
+    <li><a href="#steps">Get Help</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="home-v4-modern-flagship.html">Full Site View</a></li>
+  </ul></nav>
 </div></header>
-<main class="wrap">
-<p><strong>Concept C — Support-first, plain language • draft</strong></p>
-<h1>Do you need support with VACTERL?</h1>
-<p>We are a parent-led support group. We help children and families. We are friendly.</p>
-<div class="notice"><strong>Easy Read:</strong> VACTERL means a child is born with 3 or more health differences. Each letter is a body part. We meet once a year. You can talk to us.</div>
-<a class="btn primary" href="#">Get support now</a>
-<a class="btn" href="#">What does VACTERL mean?</a>
-<a class="btn" href="#">Join the group</a>
 
-<h2>What each letter means</h2>
-<ul>
-<li><strong>V</strong> — back bones (vertebral)</li>
-<li><strong>A</strong> — bottom opening (anal)</li>
-<li><strong>C</strong> — heart (cardiac)</li>
-<li><strong>T and E</strong> — food pipe and windpipe link (tracheo-oesophageal fistula / atresia)</li>
-<li><strong>R</strong> — kidneys or arm bones (renal / radius)</li>
-<li><strong>L</strong> — arms and legs (limb)</li>
-</ul>
-<p>About 1 in 10,000 to 40,000 babies. A doctor must confirm. This page is not medical advice. Ask your care team.</p>
+<main id="main" class="wrap">
+  <p><strong>Concept C (v2 Modernised) — Support-first, Easy Read &amp; Calm</strong></p>
+  <h1>Do you need support with VACTERL?</h1>
+  <p>We are a friendly, parent- and adult-led support group in the UK. If your baby has just been diagnosed, or you live with VACTERL yourself, you are not alone.</p>
 
-<h2>3 steps to get help</h2>
-<ol class="steps">
-<li><strong>Contact us</strong> — Facebook group or email. We reply when volunteers are free.</li>
-<li><strong>Meet us</strong> — come to the yearly Get-Together or local pop-up.</li>
-<li><strong>Stay in touch</strong> — join as a member. Help others if you can.</li>
-</ol>
+  <div class="notice" role="region" aria-label="Easy Read Summary">
+    <strong>Easy Read Summary:</strong><br>
+    VACTERL means a child is born with <strong>3 or more</strong> body differences. Every child is unique. Children born with VACTERL grow up into adults, make friends, and live full lives. You can talk to us at any time.
+  </div>
 
-<div class="easy">
-<h2 style="border:0;margin-top:0;padding:0">Contact</h2>
-<p>Facebook: <a href="https://www.facebook.com/groups/161861912196/">facebook group</a><br>
-Instagram: <a href="https://www.instagram.com/vacterlassociation/tagged/">vacterlassociation</a><br>
-Email: address to be confirmed.</p>
-<p><img class="demo" src="../assets/source-material/bristol-popup-banner.jpg" alt="Example pop-up banner used at events to explain VACTERL" loading="lazy"></p>
-</div>
+  <a class="btn primary" href="#contact">Talk to our support group now</a>
+  <a class="btn" href="#letters">See what each letter in VACTERL means</a>
+  <a class="btn" href="#trauma-help">Hospital &amp; appointment trauma tips</a>
 
-<h2>Donate</h2>
-<p>With your support we can do more. Donate link to be confirmed. Thank you.</p>
+  <h2 id="letters">What each letter means</h2>
+  <ul class="letter-list">
+    <li style="--bar:#E5A000"><strong>V — Back bones</strong> (Vertebral anomalies in the spine)</li>
+    <li style="--bar:#E03131"><strong>A — Bottom opening</strong> (Anal anomalies / Anorectal malformation, repaired with surgery and bowel care)</li>
+    <li style="--bar:#0CA678"><strong>C — Heart</strong> (Cardiac structural differences)</li>
+    <li style="--bar:#3B5BDB"><strong>T and E — Windpipe and food pipe</strong> (Tracheo-oesophageal fistula / Oesophageal atresia)</li>
+    <li style="--bar:#F76707"><strong>R — Kidneys or arm bone</strong> (Renal or Radius differences)</li>
+    <li style="--bar:#0C8599"><strong>L — Arms, hands and legs</strong> (Limb differences)</li>
+  </ul>
+  <p>VACTERL happens in about 1 in 10,000 to 1 in 40,000 babies. It is not caused by anything a parent did. <strong>Note:</strong> This page is for support and is not medical advice. Always ask your hospital care team.</p>
+
+  <h2 id="steps">3 simple steps to get help</h2>
+  <ol class="steps">
+    <li><strong>Join our friendly community</strong> — Message us on our Facebook group or by email. Other parents and adults with VACTERL will welcome you.</li>
+    <li><strong>Come to the yearly Get-Together</strong> — Meet other families, children, and specialist nurses in person once a year.</li>
+    <li><strong>Use our partner charities</strong> — We can also connect you with TOFS (swallowing/TOF), Max's Trust (bottom/bowel care), Family Fund (grants), and IPSEA (school help).</li>
+  </ol>
+
+  <div class="easy" id="trauma-help">
+    <h2 style="border:0;margin-top:0;padding:0">Worried about hospital appointments?</h2>
+    <p>Hospital tests and blood draws can feel scary or overwhelming for children and adults. Our adult members recommend:</p>
+    <ul>
+      <li>Bringing a <strong>Trauma Card</strong> to hand to nurses or doctors so they know what makes you anxious.</li>
+      <li>Taking a family member or friend as an advocate.</li>
+      <li>Using headphones, music, or puzzles to distract you during tests.</li>
+    </ul>
+  </div>
+
+  <div class="easy" id="contact">
+    <h2 style="border:0;margin-top:0;padding:0">Contact us &amp; Donate</h2>
+    <p>
+      <strong>Facebook Group:</strong> <a href="https://www.facebook.com/groups/161861912196/">Join VACTERL Support Group on Facebook</a><br>
+      <strong>Instagram:</strong> <a href="https://www.instagram.com/vacterlassociation/tagged/">@vacterlassociation</a><br>
+      <strong>Email:</strong> <code>info@vacterlsupportgroup.onmicrosoft.com</code> (permanent address to be confirmed)<br>
+      <strong>Donate:</strong> We use <strong>JustGiving</strong> (link to be confirmed).
+    </p>
+    <p><img class="demo" src="../assets/source-material/bristol-popup-banner.jpg" alt="Example pop-up banner used at events to explain VACTERL beside information leaflets" loading="lazy"></p>
+  </div>
 </main>
+
 <footer><div class="wrap">
-<strong>VACTERL Association Support Group</strong><br>
-Charity number: to be confirmed. Privacy, safeguarding and accessibility pages to be added. Review date: to be confirmed.
+  <strong>VACTERL Association Support Group</strong><br>
+  Charity number: to be confirmed (applied Oct 2023). Privacy, safeguarding and accessibility pages to be added before launch.
 </div></footer>
 </body>
 </html>
