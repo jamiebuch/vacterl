@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VACTERL Association Support Group — Home (Concept B v2: Get-Together & Stories)</title>
-<meta name="description" content="Modernised Concept B (v2). Event-led homepage centred on the annual Get-Together, Then & Now stories, and community films.">
+<title>VACTERL Association Support Group — Annual Get-Together &amp; Stories</title>
+<meta name="description" content="Each year we hold the VACTERL Get-Together, connecting families, children, young adults, and clinicians across the UK.">
 <style>
 :root {
   --ink: #141c2b;
@@ -28,8 +28,22 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline
 .topbar { background: #0f172a; color: #f8fafc; font-size: 0.88rem; }
 .topbar .wrap { padding: 9px 24px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 header { border-bottom: 1px solid var(--line); background: #fff; position: sticky; top: 0; z-index: 20; }
-.nav { display: flex; align-items: center; gap: 16px; padding: 12px 0; flex-wrap: wrap; }
-.nav img { height: 50px; border-radius: 8px; }
+.nav { display: flex; align-items: center; gap: 18px; padding: 14px 0; flex-wrap: wrap; }
+.brand-logo {
+  width: 82px;
+  height: 82px;
+  border-radius: 16px;
+  background: #fff;
+  padding: 6px;
+  border: 2px solid #cbd5e1;
+  box-shadow: 0 6px 16px rgba(20, 28, 43, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand-logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.brand-title strong { display: block; font-size: 1.35rem; line-height: 1.15; letter-spacing: -0.02em; }
+.brand-title span { font-size: 0.86rem; color: var(--muted); font-weight: 600; }
 .nav nav { margin-left: auto; display: flex; gap: 16px; flex-wrap: wrap; font-weight: 600; }
 .nav nav a { text-decoration: none; color: var(--ink); }
 .btn { display: inline-flex; align-items: center; padding: 12px 22px; border-radius: 999px; text-decoration: none; font-weight: 700; min-height: 46px; }
@@ -66,18 +80,23 @@ footer .wrap { padding: 28px 24px; font-size: 0.92rem; }
 </head>
 <body>
 <div class="topbar"><div class="wrap">
-  <span><strong>Annual VACTERL Get-Together:</strong> Featuring clinical Q&amp;A (Slido), Changing Places info &amp; family networking</span>
-  <span style="margin-left:auto">Charity number TBC</span>
+  <span><strong>Annual VACTERL Get-Together:</strong> Featuring clinical Q&amp;A, Changing Places accessibility &amp; family networking</span>
+  <span style="margin-left:auto">Support · Educate · Empower</span>
 </div></div>
 <header><div class="wrap nav">
-  <img src="../assets/source-material/logo-umbrella.jpg" alt="VACTERL Association logo">
-  <strong>VACTERL Association</strong>
+  <div class="brand-logo">
+    <img src="../assets/source-material/logo-umbrella.jpg" alt="VACTERL Association Support Group logo">
+  </div>
+  <div class="brand-title">
+    <strong>VACTERL Association</strong>
+    <span>Support Group · Est. 2003</span>
+  </div>
   <nav aria-label="Primary">
     <a href="#events">Get-Together</a>
     <a href="#then-now">Then &amp; Now</a>
     <a href="#films">Films</a>
     <a href="#partners">Partners</a>
-    <a href="home-v4-modern-flagship.html">v2 Flagship</a>
+    <a href="home-v4-modern-flagship.html">Home</a>
   </nav>
   <a class="btn blue" href="#donate">Donate</a>
 </div></header>
@@ -85,19 +104,18 @@ footer .wrap { padding: 28px 24px; font-size: 0.92rem; }
 <main>
   <div class="hero" id="events"><div class="wrap">
     <div>
-      <p><strong>Concept B (v2 Modernised) — Get-Together &amp; Community Led</strong></p>
+      <p><strong>VACTERL Association Annual Gathering</strong></p>
       <h1>Each year we hold the VACTERL Get-Together.</h1>
       <p>We’ve grown together over the years and made amazing connections. Whether you are a newly diagnosed family or an adult living with VACTERL, come and meet us.</p>
       <p style="display:flex;gap:12px;flex-wrap:wrap">
         <a class="btn dark" href="#then-now">See Then &amp; Now Stories</a>
         <a class="btn ghost" href="#films">Watch Community Films</a>
       </p>
-      <p class="small">Photos show real volunteers and events. Publish only with written consent in the offline register. No surnames for children.</p>
     </div>
     <div class="gallery" aria-label="Event photos">
       <img class="span-col" src="../assets/source-material/information-station.jpg" alt="2025 Get-Together information station with Family Fund, TOFS, ERN eUROGEN and IPSEA displays">
       <img src="../assets/source-material/bristol-popup-banner.jpg" alt="Bristol pop-up banner and table with VACTERL and Max's Trust leaflets" loading="lazy">
-      <img class="unmirror" src="../assets/source-material/volunteers-2025-03-01.jpg" alt="Volunteers in VACTERL polo shirts (unmirrored)" loading="lazy">
+      <img class="unmirror" src="../assets/source-material/volunteers-2025-03-01.jpg" alt="Volunteers in VACTERL polo shirts" loading="lazy">
     </div>
   </div></div>
 
@@ -109,11 +127,11 @@ footer .wrap { padding: 28px 24px; font-size: 0.92rem; }
       </div>
       <div class="box">
         <h3>Learn from Experts</h3>
-        <p>Talks on ARM, bowel &amp; stoma care (Gail Fitzpatrick, Birmingham Children's Hospital), continence, and our <strong>medical trauma appointment card</strong>.</p>
+        <p>Talks on ARM, bowel &amp; stoma care, continence, the <em>Adult OA/TOF Management Handbook</em>, and our <strong>medical trauma appointment card</strong>.</p>
       </div>
       <div class="box">
         <h3>From Isolation to Advocacy</h3>
-        <p>Co-producing patient empowerment guidance with TOFS, Max's Trust, and ERN eUROGEN across Europe and the globe.</p>
+        <p>Co-producing patient empowerment guidance with TOFS, Max's Trust, VACTERL Visionaries, and ERN eUROGEN across Europe and the globe.</p>
       </div>
     </div>
 
@@ -141,24 +159,24 @@ footer .wrap { padding: 28px 24px; font-size: 0.92rem; }
       <div class="film">
         <div class="ph">
           <h3>Who We Are — Short Film</h3>
-          <p>Original 513 MB MP4 — do not self-host in git. Transcode to 720p/1080p with WebVTT captions and embed via <code>lite-youtube-embed</code>.</p>
+          <p>Meet the families, children, and committee behind the VACTERL Association Support Group and hear how we have grown together over the years.</p>
         </div>
         <div class="ph">
           <h3>VACTERL Get-Together 2025</h3>
-          <p>Original 570 MB MP4 — highlights from the 2025 annual event. Requires consent check, poster image, and full on-page transcript.</p>
+          <p>Highlights from our 2025 annual gathering — family connections, clinical sessions, and community stories.</p>
         </div>
       </div>
     </section>
 
     <section id="partners">
       <h2>Collaborations &amp; Signposting</h2>
-      <p>TOFS &amp; Adult TOF Working Group · Max's Trust (ARM Community) · ERN eUROGEN · Family Fund · IPSEA · PINNT · Over The Wall Camp · SOMA · EAT · ORCHID · Birmingham Children’s Hospital.</p>
+      <p>TOFS &amp; Adult TOF Working Group · Max's Trust (ARM Community) · VACTERL Visionaries · ERN eUROGEN · Family Fund · IPSEA · PINNT · Over The Wall Camp · SOMA · EAT · ORCHID · Birmingham Children’s Hospital.</p>
     </section>
   </div>
 </main>
 
 <footer id="donate"><div class="wrap">
-  VACTERL Association Support Group — Modernised Concept B (v2). <a href="https://www.facebook.com/groups/161861912196/">Facebook</a> · <a href="https://www.instagram.com/vacterlassociation/tagged/">Instagram</a> · JustGiving QR in Slide 14. Not medical advice.
+  <strong>VACTERL Association Support Group</strong> · <a href="https://www.facebook.com/groups/161861912196/">Facebook</a> · <a href="https://www.instagram.com/vacterlassociation/tagged/">Instagram</a> · <a href="mailto:info@vacterlsupportgroup.onmicrosoft.com">Email</a>. Information provided for peer support, not medical advice.
 </div></footer>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VACTERL Association Support Group — Home (Concept A v2: Warm Welcome)</title>
-<meta name="description" content="Modernised Concept A (v2). Parent-led support network for children, young adults and families living with VACTERL association.">
+<title>VACTERL Association Support Group — Support, Educate &amp; Empower</title>
+<meta name="description" content="Parent- and peer-led support network for children, young adults and families living with VACTERL association.">
 <style>
 :root {
   --ink: #182232;
@@ -40,7 +40,7 @@ body {
 }
 .skip-link:focus { top: 12px; }
 .rainbow-top {
-  height: 5px;
+  height: 6px;
   background: linear-gradient(90deg, #FFE600, #FF2E1F, #00E838, #5B7CFF, #CFAFFF, #FF6A00, #00E5FF);
 }
 a { color: var(--blue); text-underline-offset: 3px; }
@@ -48,18 +48,30 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline
 .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 header {
   border-bottom: 1px solid var(--line);
-  background: rgba(253, 252, 250, 0.92);
+  background: rgba(253, 252, 250, 0.95);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
   z-index: 20;
 }
-.nav { display: flex; align-items: center; gap: 16px; padding: 14px 0; flex-wrap: wrap; }
-.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
-.brand img { height: 52px; width: auto; border-radius: 8px; }
-.brand strong { font-size: 1.1rem; display: block; line-height: 1.2; }
-.brand span { font-size: 0.8rem; color: var(--muted); }
-.nav nav { margin-left: auto; display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.95rem; font-weight: 600; }
+.nav { display: flex; align-items: center; gap: 18px; padding: 14px 0; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 16px; text-decoration: none; color: var(--ink); }
+.brand-logo {
+  width: 84px;
+  height: 84px;
+  border-radius: 16px;
+  background: #fff;
+  padding: 6px;
+  border: 2px solid #cbd5e1;
+  box-shadow: 0 6px 16px rgba(24, 34, 50, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand-logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.brand strong { font-size: 1.35rem; display: block; line-height: 1.15; letter-spacing: -0.02em; }
+.brand span { font-size: 0.88rem; color: var(--muted); font-weight: 600; }
+.nav nav { margin-left: auto; display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.96rem; font-weight: 600; }
 .nav nav a { text-decoration: none; color: var(--ink); }
 .nav nav a:hover { color: var(--blue); }
 .btn {
@@ -88,17 +100,18 @@ header {
 @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
 .hero-photo {
   background: var(--surface);
-  padding: 10px;
-  border-radius: 20px;
+  padding: 12px;
+  border-radius: 22px;
   border: 1px solid var(--line);
-  box-shadow: 0 12px 28px rgba(24, 34, 50, 0.07);
+  box-shadow: 0 12px 28px rgba(24, 34, 50, 0.08);
+  position: relative;
 }
-.hero-photo img {
+.hero-photo img.main {
   width: 100%;
   height: auto;
   border-radius: 14px;
   display: block;
-  transform: scaleX(-1); /* Unmirrors front-camera selfie so polo logos read left-to-right */
+  transform: scaleX(-1);
 }
 .kicker {
   display: inline-block;
@@ -173,8 +186,10 @@ footer .wrap { padding: 32px 24px; font-size: 0.92rem; }
 <div class="rainbow-top" aria-hidden="true"></div>
 <header><div class="wrap nav">
   <a class="brand" href="#">
-    <img src="../assets/source-material/logo-umbrella.jpg" alt="VACTERL Association Support Group logo: rainbow umbrella">
-    <div><strong>VACTERL Association</strong><span>UK Support Group</span></div>
+    <div class="brand-logo">
+      <img src="../assets/source-material/logo-umbrella.jpg" alt="VACTERL Association Support Group logo: rainbow umbrella">
+    </div>
+    <div><strong>VACTERL Association</strong><span>Support Group · Est. 2003</span></div>
   </a>
   <nav aria-label="Primary">
     <a href="#what-is-vacterl">What is VACTERL?</a>
@@ -183,13 +198,13 @@ footer .wrap { padding: 32px 24px; font-size: 0.92rem; }
     <a href="#collaborate">Partners</a>
     <a href="#contact">Contact</a>
   </nav>
-  <a class="btn primary" href="#contact">Donate (JustGiving)</a>
+  <a class="btn primary" href="#contact">Donate</a>
 </div></header>
 
 <main id="main" class="wrap">
   <div class="hero">
     <div>
-      <span class="kicker">Concept A (v2 Modernised) — Warm Welcome</span>
+      <span class="kicker">VACTERL Association Support Group UK</span>
       <h1>Support, educate and empower.</h1>
       <p>A parent- and peer-led network for children, young adults, and families living with VACTERL association. Each year we hold the VACTERL Get-Together — we’ve grown together over the years and made amazing connections.</p>
       <div class="cta-row">
@@ -197,10 +212,10 @@ footer .wrap { padding: 32px 24px; font-size: 0.92rem; }
         <a class="btn secondary" href="#contact">Join as a member</a>
         <a class="btn secondary" href="#contact">Donate</a>
       </div>
-      <p class="small">Information here is for peer support and is not medical advice. Always talk to your clinical care team. Charity registration applied Oct 2023 (number TBC).</p>
+      <p class="small">Information here is for peer support and is not medical advice. Always talk to your clinical care team.</p>
     </div>
     <div class="hero-photo">
-      <img src="../assets/source-material/volunteers-2025-03-01.jpg" alt="Three volunteers wearing VACTERL logo polo shirts at an information stand" fetchpriority="high">
+      <img class="main" src="../assets/source-material/volunteers-2025-03-01.jpg" alt="Three volunteers wearing VACTERL logo polo shirts at an information stand" fetchpriority="high">
     </div>
   </div>
 
@@ -216,7 +231,7 @@ footer .wrap { padding: 32px 24px; font-size: 0.92rem; }
       <div class="letter" style="--bar:#F76707;--bg-pill:#FFF4E6;--ink-pill:#8C3800"><span class="letter-badge">R</span><strong class="title">Renal / Radius</strong><span>Kidneys or forearm</span></div>
       <div class="letter" style="--bar:#0C8599;--bg-pill:#E3FAFC;--ink-pill:#074F5B"><span class="letter-badge">L</span><strong class="title">Limb</strong><span>Arms, hands or legs</span></div>
     </div>
-    <p class="small">* Banner wording: TE — Fistula ± oesophageal atresia. VACTERL is not a single diagnosis with one cause. Prevalence is ~1 in 10,000 to 1 in 40,000 live-born infants (Solomon, 2011). Needs clinician sign-off.</p>
+    <p class="small">* TE — Fistula ± oesophageal atresia. VACTERL is not a single diagnosis with one cause. Prevalence is ~1 in 10,000 to 1 in 40,000 live-born infants (Solomon, 2011).</p>
   </section>
 
   <section id="how-we-help">
@@ -237,34 +252,35 @@ footer .wrap { padding: 32px 24px; font-size: 0.92rem; }
     </div>
     <div class="quote-banner">
       <blockquote>“When our son was born, almost 20 years ago, I was told that his condition could be life-limiting. Having you and Alan join the group is sure testament that it is not.”</blockquote>
-      <cite>— Parent reflection from the 2024 Annual Meeting report (TOFS article by Kate Tyler)</cite>
+      <cite>— Parent reflection from our Annual Meeting</cite>
     </div>
   </section>
 
   <section id="get-together">
     <h2>Annual VACTERL Get-Together</h2>
-    <p>Each year we bring together families, young adults, clinical nurse specialists, and partner charities. See our 2025 information station, "Then &amp; Now" banner photos, and community films.</p>
-    <p><a href="home-v4-modern-flagship.html#get-together">Explore the full modernised v2 Flagship Concept →</a></p>
+    <p>Each year we bring together families, young adults, clinical nurse specialists, and partner charities across the UK.</p>
+    <p><a href="home-v4-modern-flagship.html#get-together">Explore our Annual Get-Together &amp; Community Stories →</a></p>
   </section>
 
   <section id="collaborate">
     <h2>We collaborate &amp; signpost</h2>
-    <p>We work alongside <strong>TOFS</strong> (and the Adult TOF Working Group), <strong>Max's Trust</strong> (UK ARM community), <strong>ERN eUROGEN</strong>, <strong>Family Fund</strong>, <strong>IPSEA</strong>, <strong>PINNT</strong>, <strong>Over The Wall Camp</strong>, <strong>SOMA</strong>, and hospital specialist teams such as Birmingham Children's Hospital.</p>
+    <p>We work alongside <strong>TOFS</strong> (and the Adult TOF Working Group), <strong>Max's Trust</strong> (UK ARM community), <strong>VACTERL Visionaries</strong>, <strong>ERN eUROGEN</strong>, <strong>Family Fund</strong>, <strong>IPSEA</strong>, <strong>PINNT</strong>, <strong>Over The Wall Camp</strong>, <strong>SOMA</strong>, and hospital specialist teams such as Birmingham Children's Hospital.</p>
   </section>
 
   <section id="contact">
     <h2>Contact, Join &amp; Donate</h2>
-    <p>Connect with us via our Facebook support group, follow us on Instagram, or donate via JustGiving (see QR codes in the <a href="home-v4-modern-flagship.html#get-involved">v2 Flagship mockup</a>). Confirm permanent email before launch (slides use <code>info@vacterlsupportgroup.onmicrosoft.com</code>).</p>
+    <p>Connect with us via our Facebook support group, follow us on Instagram, email us, or support our work via JustGiving.</p>
     <ul>
       <li><a href="https://www.facebook.com/groups/161861912196/">Facebook Support Group</a></li>
       <li><a href="https://www.instagram.com/vacterlassociation/tagged/">Instagram (@vacterlassociation)</a></li>
+      <li>Email: <a href="mailto:info@vacterlsupportgroup.onmicrosoft.com">info@vacterlsupportgroup.onmicrosoft.com</a></li>
     </ul>
   </section>
 </main>
 
 <footer><div class="wrap">
-  <strong>VACTERL Association Support Group</strong> — Modernised Concept A (v2). Charity number TBC (applied Oct 2023 — verify).<br>
-  <a href="#">Privacy</a> · <a href="#">Safeguarding</a> · <a href="#">Accessibility</a> · <span>Not medical advice · Review date TBC</span>
+  <strong>VACTERL Association Support Group</strong> · Supporting families across the UK since 2003.<br>
+  <a href="#">Privacy</a> · <a href="#">Safeguarding</a> · <a href="#">Accessibility</a> · <span>Information provided for peer support, not medical advice.</span>
 </div></footer>
 </body>
 </html>

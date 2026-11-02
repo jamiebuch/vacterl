@@ -41,7 +41,7 @@ CTAs: Get support / Join us / Donate.
 > We collaborate with other agencies and charities, to raise awareness and contribute to research. And make connections across the globe!
 
 Named across event materials and display boards (verify before listing):
-* **Core condition & advocacy partners**: TOFS (Tracheo-Oesophageal Fistula Support & Adult TOF Working Group), Max's Trust (supporting the UK Anorectal Malformation / ARM community), ERN eUROGEN (European Reference Network for Rare Uro-Recto-Genital Diseases — *"Patient Empowerment: A Journey From Isolation to Advocacy"*), SOMA, EAT, ORCHID.
+* **Core condition & advocacy partners**: TOFS (Tracheo-Oesophageal Fistula Support, Reg. Charity 327735 & Adult TOF Working Group — *Adult OA/TOF Management Handbook*), Max's Trust (supporting the UK Anorectal Malformation / ARM and VACTERL community, Reg. Charity 1184081), VACTERL Visionaries (UK adult-led VACTERL resource network), ERN eUROGEN (European Reference Network for Rare Uro-Recto-Genital Diseases — *"Patient Empowerment: A Journey From Isolation to Advocacy"*), SOMA, EAT, ORCHID.
 * **Practical, legal & camp support**: Family Fund (grants for families raising disabled or seriously ill children), IPSEA (Independent Provider of Special Education Advice — SEND legal advice), PINNT (support for people on home artificial nutrition), Over The Wall Camp (free residential camps for children and families), Buttony Bear (children with a stoma/button), Changing Places Toilets.
 * **Clinical & industry**: Birmingham Children's Hospital (ARM/stoma/bowel care specialist nursing), Coloplast (printed on banner foot).
 
@@ -62,11 +62,11 @@ Paraphrased — retype fully with permission, do not OCR-publish scan:
 * Medical trauma & self-advocacy presentation (Aled, his partner Kodi, and Alan with the Adult TOF Working Group): definitions of medical/emotional trauma, triggers (having blood taken, physical exams without consent, feeling a loss of control), and practical tools prior to/during appointments — carrying a **trauma card** to hand to health professionals, taking an advocate, and using music or puzzles for distraction.
 * Note: shared challenges across rare conditions include accessing medical records, disability support, and appropriate medical devices/prosthetics.
 
-## Contact block (from slide 10 — verify before publish)
+## Contact block (from slide 10 + public directory records)
 
 * Facebook: `https://www.facebook.com/groups/161861912196/`
 * Instagram: `https://www.instagram.com/vacterlassociation/tagged/`
-* Email: `info@vacterlsupportgroup.onmicrosoft.com` — likely temporary, confirm permanent domain.
+* Email: `info@vacterlsupportgroup.onmicrosoft.com` (historical directory listing also shows `support@vacterl-association.org.uk` and domain `vacterl-association.org.uk`).
 
 ## Membership / volunteer (from slides 11–12)
 

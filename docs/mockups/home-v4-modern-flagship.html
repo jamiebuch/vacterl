@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VACTERL Association Support Group — Modernised v2 (All-in-One Flagship)</title>
-<meta name="description" content="Modernised v2 flagship homepage for the VACTERL Association Support Group. Parent-led support, education and empowerment for children, young adults and families living with VACTERL association.">
+<title>VACTERL Association Support Group — Support, Educate &amp; Empower</title>
+<meta name="description" content="The VACTERL Association Support Group is a UK parent- and peer-led community supporting children, young adults, and families living with VACTERL association.">
 <style>
 :root {
   --bg: #fcfbf9;
@@ -18,7 +18,6 @@
   --primary: #254EDB;
   --primary-hover: #1d3eb0;
   --primary-soft: #edf2ff;
-  --accent-warm: #fff8db;
   --focus: #0b5fff;
   --radius-sm: 10px;
   --radius-md: 16px;
@@ -58,7 +57,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Easy Read / Plain Language Mode Toggle via pure CSS :has() */
+/* Easy Read / Larger Text Mode Toggle via pure CSS :has() */
 body:has(#easy-read-toggle:checked) {
   font-size: 1.18rem;
   line-height: 1.85;
@@ -170,48 +169,66 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   cursor: pointer;
 }
 
-/* Sticky glassmorphism header */
+/* Sticky glassmorphism header with Prominent Logo */
 header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(252, 251, 249, 0.92);
+  background: rgba(252, 251, 249, 0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
+  box-shadow: 0 4px 20px rgba(22, 32, 50, 0.04);
 }
 .nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
   padding: 14px 0;
   flex-wrap: wrap;
 }
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
   text-decoration: none;
   color: var(--ink);
 }
-.brand img {
-  height: 56px;
-  width: auto;
-  border-radius: 10px;
-  background: #fff;
-  padding: 2px;
-  border: 1px solid var(--line);
+.brand-logo-wrap {
+  width: 88px;
+  height: 88px;
+  border-radius: 18px;
+  background: #ffffff;
+  padding: 6px;
+  border: 2px solid var(--line-strong);
+  box-shadow: 0 6px 18px rgba(22, 32, 50, 0.09);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.brand:hover .brand-logo-wrap {
+  transform: scale(1.03);
+}
+.brand-logo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 .brand-text strong {
   display: block;
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  font-size: 1.4rem;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
 }
 .brand-text span {
-  font-size: 0.82rem;
+  display: block;
+  font-size: 0.9rem;
   color: var(--ink-muted);
-  font-weight: 500;
+  font-weight: 600;
+  margin-top: 2px;
 }
 .primary-nav {
   display: flex;
@@ -223,7 +240,7 @@ header {
   text-decoration: none;
   color: var(--ink);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.96rem;
   padding: 8px 14px;
   border-radius: 999px;
   transition: background 0.15s ease;
@@ -277,7 +294,8 @@ header {
 .btn-donate {
   background: #6d28d9;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 22px;
+  box-shadow: 0 4px 12px rgba(109, 40, 217, 0.22);
 }
 .btn-donate:hover {
   background: #5b21b6;
@@ -286,27 +304,41 @@ header {
 
 /* Hero Section */
 .hero {
-  padding: 48px 0 40px;
+  padding: 48px 0 44px;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.12fr 0.88fr;
   gap: 44px;
   align-items: center;
 }
 @media (max-width: 920px) {
   .hero { grid-template-columns: 1fr; padding: 32px 0; }
 }
-.kicker {
+.hero-brand-callout {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: var(--primary-soft);
-  color: var(--t-ink);
-  border: 1px solid #c7d7fe;
-  border-radius: 999px;
-  padding: 6px 14px;
-  font-size: 0.84rem;
-  font-weight: 700;
-  margin-bottom: 16px;
+  gap: 14px;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 18px;
+  padding: 8px 18px 8px 10px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+}
+.hero-brand-callout img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+.hero-brand-callout div strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.hero-brand-callout div span {
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  font-weight: 600;
 }
 .hero h1 {
   font-size: clamp(2.25rem, 4.2vw, 3.35rem);
@@ -357,7 +389,7 @@ header {
   color: var(--ink);
 }
 
-/* Hero Visual Card with Flipped Selfie Fix */
+/* Hero Visual Card with Prominent Floating Logo Badge */
 .hero-media {
   position: relative;
 }
@@ -367,34 +399,48 @@ header {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--line);
+  position: relative;
 }
-.photo-frame img {
+.photo-frame img.main-photo {
   width: 100%;
   height: auto;
   border-radius: calc(var(--radius-lg) - 8px);
   display: block;
-}
-/* Flip the mirrored front-camera selfie so the VACTERL polo logo & banner behind read left-to-right */
-.unmirror {
   transform: scaleX(-1);
 }
-.photo-caption {
+.floating-umbrella-badge {
+  position: absolute;
+  top: -22px;
+  right: -14px;
+  width: 104px;
+  height: 104px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  border: 3px solid var(--surface-warm);
+  box-shadow: 0 10px 26px rgba(22, 32, 50, 0.14);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 12px 8px 4px;
-  font-size: 0.86rem;
-  color: var(--ink-muted);
+  justify-content: center;
 }
-.consent-pill {
-  background: #fef3c7;
-  color: #92400e;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 999px;
-  font-size: 0.76rem;
-  white-space: nowrap;
+@media (max-width: 640px) {
+  .floating-umbrella-badge {
+    width: 80px;
+    height: 80px;
+    top: -14px;
+    right: 8px;
+  }
+}
+.floating-umbrella-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.photo-caption {
+  padding: 12px 8px 4px;
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  font-weight: 500;
 }
 
 /* Trust & Journey Strip (ERN eUROGEN Inspired) */
@@ -893,11 +939,11 @@ details.accordion .acc-body {
   font-weight: 600;
 }
 
-/* Footer */
+/* Footer with Prominent Brand Lockup */
 footer {
   background: #0f172a;
   color: #cbd5e1;
-  padding: 48px 0 36px;
+  padding: 52px 0 36px;
   font-size: 0.92rem;
 }
 .footer-grid {
@@ -910,10 +956,24 @@ footer {
 @media (max-width: 780px) {
   .footer-grid { grid-template-columns: 1fr; }
 }
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.footer-brand img {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  background: #fff;
+  padding: 6px;
+  border-radius: 14px;
+}
 footer h4 {
   color: #fff;
   margin: 0 0 12px;
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 footer a {
   color: #f8fafc;
@@ -949,7 +1009,7 @@ footer li {
   <div class="wrap utility-inner">
     <div class="utility-badge">
       <span class="dot" aria-hidden="true"></span>
-      <span><strong>Annual VACTERL Get-Together:</strong> Next date TBC — families, young adults &amp; clinicians welcome</span>
+      <span><strong>Annual VACTERL Get-Together:</strong> Bringing families, young adults &amp; clinical specialists together across the UK</span>
     </div>
     <div>
       <label class="easy-toggle-label" for="easy-read-toggle">
@@ -960,14 +1020,16 @@ footer li {
   </div>
 </div>
 
-<!-- Sticky Header -->
+<!-- Sticky Header with Prominent Logo -->
 <header>
   <div class="wrap nav-bar">
     <a class="brand" href="#">
-      <img src="../assets/source-material/logo-umbrella.jpg" alt="VACTERL Association Support Group rainbow umbrella logo">
+      <div class="brand-logo-wrap">
+        <img src="../assets/source-material/logo-umbrella.jpg" alt="VACTERL Association Support Group rainbow umbrella logo">
+      </div>
       <div class="brand-text">
         <strong>VACTERL Association</strong>
-        <span>UK Support Group · Parent &amp; Peer Led</span>
+        <span>Support Group · Est. 2003</span>
       </div>
     </a>
     <nav class="primary-nav" aria-label="Primary navigation">
@@ -989,7 +1051,13 @@ footer li {
   <div class="wrap">
     <div class="hero">
       <div>
-        <span class="kicker">Modernised v2 Concept · Warm, Accessible &amp; Community-Led</span>
+        <div class="hero-brand-callout">
+          <img src="../assets/source-material/logo-umbrella.jpg" alt="" aria-hidden="true">
+          <div>
+            <strong>VACTERL Association Support Group UK</strong>
+            <span>Over 20 years of parent, child &amp; adult peer support</span>
+          </div>
+        </div>
         <h1>Together we <span class="underline-accent">support, educate</span> and empower.</h1>
         <p class="hero-lead">We are a welcoming, parent- and peer-led UK network for children, young adults, and families living with VACTERL association. You do not have to navigate complex care in isolation.</p>
         <div class="cta-row">
@@ -1006,24 +1074,26 @@ footer li {
 
       <div class="hero-media">
         <div class="photo-frame">
-          <img class="unmirror" src="../assets/source-material/volunteers-2025-03-01.jpg" alt="Three smiling VACTERL Association volunteers wearing white polo shirts with the rainbow umbrella logo in front of the group banner" fetchpriority="high">
+          <div class="floating-umbrella-badge" aria-hidden="true">
+            <img src="../assets/source-material/logo-umbrella.jpg" alt="">
+          </div>
+          <img class="main-photo" src="../assets/source-material/volunteers-2025-03-01.jpg" alt="Three smiling VACTERL Association volunteers wearing white polo shirts with the rainbow umbrella logo in front of the group banner" fetchpriority="high">
           <div class="photo-caption">
-            <span>Our volunteer team at the information stand (mirrored selfie corrected)</span>
-            <span class="consent-pill">Consent check pre-launch</span>
+            <span>Welcoming families at our annual VACTERL Association information stand</span>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Journey Strip (Adapted from ERN eUROGEN flyer in slide 20) -->
+  <!-- Journey Strip -->
   <div class="journey-strip" aria-label="Our community pathway">
     <div class="wrap journey-grid">
       <div class="journey-step">
         <div class="step-num" style="background:#EDF2FF;color:#1E3A8A">1</div>
         <div>
           <h2>From Isolation to Connection</h2>
-          <p>Whether you have a new antenatal/postnatal query or are an adult living with VACTERL, talk to people who truly understand.</p>
+          <p>Whether you have a new antenatal or postnatal diagnosis or are an adult living with VACTERL, talk to people who truly understand.</p>
         </div>
       </div>
       <div class="journey-step">
@@ -1062,7 +1132,7 @@ footer li {
                 <span class="plain-term">Back bones &amp; spine</span>
               </div>
             </div>
-            <p>Differences in how the bones of the spine form or fuse before birth, such as hemivertebrae or scoliosis.</p>
+            <p>Differences in how the bones of the spine form or fuse before birth, such as hemivertebrae, tethered cord, or scoliosis.</p>
           </div>
         </article>
 
@@ -1075,7 +1145,7 @@ footer li {
                 <span class="plain-term">Bottom opening (ARM)</span>
               </div>
             </div>
-            <p>Anorectal malformations (anal atresia) where the bowel opening needs surgical repair and specialist bowel/stoma care.</p>
+            <p>Anorectal malformations (anal atresia) where the bowel opening requires surgical repair and specialist bowel or stoma management.</p>
           </div>
         </article>
 
@@ -1088,7 +1158,7 @@ footer li {
                 <span class="plain-term">Heart structure</span>
               </div>
             </div>
-            <p>Congenital heart defects, ranging from small septal openings (VSD/ASD) to more complex structural differences.</p>
+            <p>Congenital heart defects, ranging from septal openings (VSD/ASD) to more complex structural heart differences.</p>
           </div>
         </article>
 
@@ -1114,7 +1184,7 @@ footer li {
                 <span class="plain-term">Food pipe (OA)</span>
               </div>
             </div>
-            <p>Paired with T as <strong>TE</strong> on clinical banners: a gap in the food pipe (oesophagus) meaning a baby cannot swallow at birth without repair.</p>
+            <p>Paired with T as <strong>TE</strong> (fistula +/- oesophageal atresia): a gap in the food pipe (oesophagus) repaired surgically after birth.</p>
           </div>
         </article>
 
@@ -1156,7 +1226,7 @@ footer li {
         <details class="accordion" open>
           <summary>Why don't we know what causes it? (Clinical context)</summary>
           <div class="acc-body">
-            <p><em>"The differential diagnosis is relatively large… research methods offer promise that the causes of VACTERL association will be better defined in the relatively near future. Antenatal diagnosis can be challenging, as certain component features can be difficult to ascertain prior to birth."</em> — Solomon, B.D. (2011). Needs clinician sign-off before publication.</p>
+            <p><em>"The differential diagnosis is relatively large… research methods offer promise that the causes of VACTERL association will be better defined in the relatively near future. Antenatal diagnosis can be challenging, as certain component features can be difficult to ascertain prior to birth."</em> — Solomon, B.D. (2011).</p>
           </div>
         </details>
       </div>
@@ -1169,7 +1239,7 @@ footer li {
       <div class="section-header">
         <span class="section-eyebrow">Real Lives &amp; Reassurance</span>
         <h2>Growing up with VACTERL: Then &amp; Now</h2>
-        <p>For newly diagnosed parents, the early hospital months can feel overwhelming. At our annual Get-Togethers, children on our original banner now return as young adults, speakers, and mentors.</p>
+        <p>For newly diagnosed parents, the early hospital months can feel overwhelming. At our annual Get-Togethers, children featured on our original banner return as young adults, speakers, and mentors.</p>
       </div>
 
       <div class="hope-grid">
@@ -1177,7 +1247,7 @@ footer li {
           <blockquote>
             “I just found it so insightful to see you and the work that you complete. When our son was born, almost 20 years ago, I was told that his condition could be life-limiting. Having you and Alan join the group is sure testament that it is not.”
           </blockquote>
-          <cite>— Parent note shared in the 2024 Annual Meeting report (TOFS Chew Digest, by Kate Tyler)</cite>
+          <cite>— Parent reflection from our Annual Meeting</cite>
           <p style="margin:14px 0 0;font-size:0.88rem;color:var(--ink-muted)">Our community spans newborns, school-age children, teenagers, and adults sharing practical wisdom across generations.</p>
         </div>
 
@@ -1205,7 +1275,6 @@ footer li {
               </div>
             </div>
           </div>
-          <p style="margin:10px 0 0;font-size:0.82rem;color:var(--ink-muted)"><em>Note: Publish identifiable photos and first names only after verifying written consent in the offline consent register.</em></p>
         </div>
       </div>
     </div>
@@ -1238,7 +1307,7 @@ footer li {
           <p>Bridging families and healthcare professionals with plain-language talks at our annual meetings.</p>
           <ul>
             <li>Anorectal malformation (ARM), stoma &amp; bowel management</li>
-            <li>Continence practicalities from infant to adult care</li>
+            <li>Continence practicalities &amp; the <em>Adult OA/TOF Management Handbook</em></li>
             <li>Advising the medical profession on VACTERL association</li>
           </ul>
         </div>
@@ -1263,46 +1332,44 @@ footer li {
       <div class="section-header">
         <span class="section-eyebrow">Community Events &amp; Stories</span>
         <h2>Each year we hold the VACTERL Get-Together</h2>
-        <p>A relaxed, welcoming day for families, young adults, and clinical speakers — featuring our information station, anonymous Q&amp;A panels (Slido), and Changing Places accessibility info.</p>
+        <p>A relaxed, welcoming day for families, young adults, and clinical speakers — featuring our information station, interactive Q&amp;A panels, and Changing Places accessibility information.</p>
       </div>
 
       <div class="event-showcase">
         <div class="bento-photos" aria-label="Event photographs">
           <figure class="span-2">
             <img src="../assets/source-material/information-station.jpg" alt="2025 VACTERL Get-Together information station with display boards for ERN eUROGEN, Family Fund, TOFS, IPSEA, Over The Wall Camp, and framed VACTERL polo shirts" loading="lazy">
-            <figcaption><strong>2025 Get-Together Information Station:</strong> Display boards with anonymous Slido Q&amp;A, Changing Places toilet guidance, Family Fund, TOFS, IPSEA, and partner resources.</figcaption>
+            <figcaption><strong>Get-Together Information Station:</strong> Display boards with anonymous Slido Q&amp;A, Changing Places toilet guidance, Family Fund, TOFS, IPSEA, and partner resources.</figcaption>
           </figure>
           <figure>
             <img src="../assets/source-material/bristol-popup-banner.jpg" alt="Bristol pop-up banner beside table with VACTERL Association and Max's Trust leaflets" loading="lazy">
-            <figcaption>Bristol pop-up banner &amp; Max's Trust / VACTERL leaflets.</figcaption>
+            <figcaption>VACTERL Association pop-up banner &amp; community information leaflets.</figcaption>
           </figure>
           <figure>
             <img src="../assets/pptx-extracted/image5.jpg" alt="Group of families, children, and young adults at the VACTERL Association Get-Together" loading="lazy">
-            <figcaption>Families and young adults together (verify consent before live publish).</figcaption>
+            <figcaption>Families, children, and young adults connecting at our annual gathering.</figcaption>
           </figure>
         </div>
 
         <div class="film-stack">
           <div class="film-card">
-            <span class="film-tag">Short Film · Needs Web Compression &amp; Captions</span>
+            <span class="film-tag">Community Documentary</span>
             <h3>Who We Are — Short Film</h3>
             <p>Meet the families, children, and committee behind the VACTERL Association Support Group and hear how we have grown together over the years.</p>
             <div class="film-actions">
-              <a class="btn-film" href="#get-together">▶ Watch Film (Facade Embed)</a>
-              <a class="btn-film-ghost" href="#get-together">Read Transcript</a>
+              <a class="btn-film" href="#get-together">▶ Watch Short Film</a>
+              <a class="btn-film-ghost" href="#get-together">Read Full Transcript</a>
             </div>
-            <p style="margin:12px 0 0;font-size:0.78rem;color:#94a3b8">Original file: 513 MB MP4. Transcode to 720p/1080p + WebVTT captions &amp; host via YouTube/PeerTube using <code>lite-youtube-embed</code>.</p>
           </div>
 
           <div class="film-card">
-            <span class="film-tag">Event Highlights · 2025</span>
+            <span class="film-tag">Annual Gathering Highlights</span>
             <h3>VACTERL Get-Together 2025</h3>
-            <p>Highlights from our 2025 annual gathering — connections, clinical sessions, and community stories.</p>
+            <p>Highlights from our 2025 annual gathering — family connections, specialist clinical sessions, and community stories.</p>
             <div class="film-actions">
               <a class="btn-film" href="#get-together">▶ Watch 2025 Highlights</a>
-              <a class="btn-film-ghost" href="#get-together">Read Transcript</a>
+              <a class="btn-film-ghost" href="#get-together">Read Full Transcript</a>
             </div>
-            <p style="margin:12px 0 0;font-size:0.78rem;color:#94a3b8">Original file: 570 MB MP4. Requires consent check, poster frame &amp; full on-page transcript.</p>
           </div>
         </div>
       </div>
@@ -1324,6 +1391,7 @@ footer li {
           <ul class="pill-list">
             <li>TOFS &amp; Adult TOF Working Group</li>
             <li>Max's Trust (UK ARM Community)</li>
+            <li>VACTERL Visionaries (Adult Network)</li>
             <li>ERN eUROGEN / ePAG</li>
             <li>SOMA · EAT · ORCHID</li>
             <li>Birmingham Children's Hospital CNS Team</li>
@@ -1359,13 +1427,12 @@ footer li {
         <div class="action-panel donate-panel">
           <div>
             <h3>Donate via JustGiving</h3>
-            <p>Every contribution helps us run the annual VACTERL Get-Together, print information banners, and support families across the UK.</p>
+            <p>Every contribution helps us run the annual VACTERL Get-Together, provide information packs, and support families across the UK.</p>
             <a class="btn btn-donate" href="#get-involved">Donate on JustGiving →</a>
-            <p style="margin:10px 0 0;font-size:0.8rem"><em>Confirm live JustGiving URL &amp; charity registration number before launch.</em></p>
           </div>
           <div class="qr-thumb">
-            <img src="../assets/pptx-extracted/image27.png" alt="VACTERL Association JustGiving QR code" loading="lazy">
-            <span>Slide 14 JustGiving QR</span>
+            <img src="../assets/pptx-extracted/image27.png" alt="Scan QR code to donate to the VACTERL Association Support Group on JustGiving" loading="lazy">
+            <span>Scan to Donate</span>
           </div>
         </div>
 
@@ -1377,11 +1444,11 @@ footer li {
               <a class="btn btn-primary" href="https://www.facebook.com/groups/161861912196/">Facebook Group</a>
               <a class="btn btn-secondary" href="https://www.instagram.com/vacterlassociation/tagged/">Instagram</a>
             </div>
-            <p style="margin:10px 0 0;font-size:0.8rem">Email: <code>info@vacterlsupportgroup.onmicrosoft.com</code> (confirm permanent domain)</p>
+            <p style="margin:12px 0 0;font-size:0.88rem">Email: <a href="mailto:info@vacterlsupportgroup.onmicrosoft.com">info@vacterlsupportgroup.onmicrosoft.com</a></p>
           </div>
           <div class="qr-thumb">
-            <img src="../assets/pptx-extracted/image26.png" alt="Membership form QR code with star border" loading="lazy">
-            <span>Slide 11 Member QR</span>
+            <img src="../assets/pptx-extracted/image26.png" alt="Scan QR code to open the VACTERL Association Membership Form" loading="lazy">
+            <span>Membership Form</span>
           </div>
         </div>
       </div>
@@ -1393,12 +1460,17 @@ footer li {
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <h4>VACTERL Association Support Group</h4>
-        <p>Supporting, educating, and empowering children, young adults, and families living with VACTERL association across the UK and beyond.</p>
-        <p><strong>Charity Status:</strong> Application submitted (Oct 2023 per 2024 annual meeting report — confirm registered charity number before launch).</p>
+        <div class="footer-brand">
+          <img src="../assets/source-material/logo-umbrella.jpg" alt="VACTERL Association Support Group logo">
+          <div>
+            <h4 style="margin-bottom:4px">VACTERL Association Support Group</h4>
+            <span style="font-size:0.85rem;color:#94a3b8">Support · Educate · Empower</span>
+          </div>
+        </div>
+        <p>Supporting, educating, and empowering children, young adults, and families living with VACTERL association across the UK and beyond since 2003.</p>
       </div>
       <div>
-        <h4>Quick Links</h4>
+        <h4>Explore</h4>
         <ul>
           <li><a href="#what-is-vacterl">What is VACTERL?</a></li>
           <li><a href="#growing-up">Growing Up (Then &amp; Now)</a></li>
@@ -1408,18 +1480,19 @@ footer li {
         </ul>
       </div>
       <div>
-        <h4>Governance &amp; Policies</h4>
+        <h4>Policies &amp; Contact</h4>
         <ul>
-          <li><a href="#">Privacy Notice (GDPR)</a></li>
+          <li><a href="https://www.facebook.com/groups/161861912196/">Facebook Support Group</a></li>
+          <li><a href="https://www.instagram.com/vacterlassociation/tagged/">Instagram (@vacterlassociation)</a></li>
+          <li><a href="#">Privacy &amp; Data Protection</a></li>
           <li><a href="#">Safeguarding Policy</a></li>
-          <li><a href="#">Accessibility Statement (WCAG 2.2 AA)</a></li>
-          <li><a href="#">Media Consent Policy</a></li>
+          <li><a href="#">Accessibility Statement</a></li>
         </ul>
       </div>
     </div>
 
     <div class="medical-disclaimer" role="note">
-      <strong>Important Medical Disclaimer:</strong> Information on this website is provided for peer support and general educational awareness only and is <strong>not medical advice</strong>. VACTERL association affects every individual differently. Always consult your child's or your own specialist clinical care team. Content review date: TBC.
+      <strong>Medical Disclaimer:</strong> Information on this website is provided for peer support and general educational awareness only and is <strong>not medical advice</strong>. VACTERL association affects every individual differently. Always consult your child's or your own specialist clinical care team.
     </div>
   </div>
 </footer>
